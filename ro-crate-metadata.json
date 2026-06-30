@@ -1,91 +1,6 @@
 {
-    "@context": [
-        "https://w3id.org/ro/crate/1.2/context",
-        {
-            "GithubService": "https://w3id.org/ro/terms/test#GithubService",
-            "JenkinsService": "https://w3id.org/ro/terms/test#JenkinsService",
-            "PlanemoEngine": "https://w3id.org/ro/terms/test#PlanemoEngine",
-            "TestDefinition": "https://w3id.org/ro/terms/test#TestDefinition",
-            "TestInstance": "https://w3id.org/ro/terms/test#TestInstance",
-            "TestService": "https://w3id.org/ro/terms/test#TestService",
-            "TestSuite": "https://w3id.org/ro/terms/test#TestSuite",
-            "TravisService": "https://w3id.org/ro/terms/test#TravisService",
-            "definition": "https://w3id.org/ro/terms/test#definition",
-            "engineVersion": "https://w3id.org/ro/terms/test#engineVersion",
-            "instance": "https://w3id.org/ro/terms/test#instance",
-            "resource": "https://w3id.org/ro/terms/test#resource",
-            "runsOn": "https://w3id.org/ro/terms/test#runsOn"
-        }
-    ],
+    "@context": "https://w3id.org/ro/crate/1.1/context",
     "@graph": [
-        {
-            "@id": "./",
-            "@type": "Dataset",
-            "creativeWorkStatus": "InProgress",
-            "datePublished": "2026-06-29T23:17:19+00:00",
-            "description": "",
-            "hasPart": [
-                {
-                    "@id": "main.nf"
-                },
-                {
-                    "@id": "assets/"
-                },
-                {
-                    "@id": "conf/"
-                },
-                {
-                    "@id": "docs/"
-                },
-                {
-                    "@id": "modules/"
-                },
-                {
-                    "@id": "modules/nf-core/"
-                },
-                {
-                    "@id": "workflows/"
-                },
-                {
-                    "@id": "subworkflows/"
-                },
-                {
-                    "@id": "nextflow.config"
-                },
-                {
-                    "@id": "README.md"
-                },
-                {
-                    "@id": "nextflow_schema.json"
-                },
-                {
-                    "@id": "LICENSE"
-                },
-                {
-                    "@id": "modules.json"
-                },
-                {
-                    "@id": "docs/usage.md"
-                },
-                {
-                    "@id": "docs/output.md"
-                },
-                {
-                    "@id": ".nf-core.yml"
-                }
-            ],
-            "isBasedOn": "https://github.com/BCCDC-PHL/genoflu-nf",
-            "license": "MIT",
-            "mainEntity": {
-                "@id": "main.nf"
-            },
-            "mentions": [
-                {
-                    "@id": "#f43db31a-f538-4b5d-8040-8fb508eb6fb6"
-                }
-            ],
-            "name": "BCCDC-PHL/genoflu-nf"
-        },
         {
             "@id": "ro-crate-metadata.json",
             "@type": "CreativeWork",
@@ -94,7 +9,7 @@
             },
             "conformsTo": [
                 {
-                    "@id": "https://w3id.org/ro/crate/1.2"
+                    "@id": "https://w3id.org/ro/crate/1.1"
                 },
                 {
                     "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0"
@@ -102,172 +17,766 @@
             ]
         },
         {
-            "@id": "main.nf",
-            "@type": [
-                "File",
-                "SoftwareSourceCode",
-                "ComputationalWorkflow"
-            ],
-            "contributor": [
+            "@id": "./",
+            "@type": "Dataset",
+            "datePublished": "2026-06-30",
+            "conformsTo": [
                 {
-                    "@id": "https://orcid.org/0000-0002-6178-3585"
+                    "@id": "https://w3id.org/ro/wfrun/process/0.1"
+                },
+                {
+                    "@id": "https://w3id.org/ro/wfrun/workflow/0.1"
+                },
+                {
+                    "@id": "https://w3id.org/ro/wfrun/provenance/0.1"
+                },
+                {
+                    "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0"
                 }
             ],
-            "dateCreated": "",
-            "dateModified": "2026-06-29T16:17:19Z",
-            "dct:conformsTo": "https://bioschemas.org/profiles/ComputationalWorkflow/1.0-RELEASE/",
-            "keywords": [
-                "nf-core",
-                "nextflow"
-            ],
-            "license": [
-                "MIT"
-            ],
-            "name": [
-                "BCCDC-PHL/genoflu-nf"
-            ],
-            "programmingLanguage": {
-                "@id": "https://w3id.org/workflowhub/workflow-ro-crate#nextflow"
-            },
-            "sdPublisher": {
-                "@id": "https://nf-co.re/"
-            },
-            "url": [
-                "https://github.com/BCCDC-PHL/genoflu-nf",
-                "https://nf-co.re/BCCDC-PHL/genoflu-nf/dev/"
-            ],
-            "version": [
-                "1.0.0dev"
-            ]
-        },
-        {
-            "@id": "https://w3id.org/workflowhub/workflow-ro-crate#nextflow",
-            "@type": "ComputerLanguage",
-            "identifier": {
-                "@id": "https://www.nextflow.io/"
-            },
-            "name": "Nextflow",
-            "url": {
-                "@id": "https://www.nextflow.io/"
-            },
-            "version": "!>=25.10.4"
-        },
-        {
-            "@id": "#f43db31a-f538-4b5d-8040-8fb508eb6fb6",
-            "@type": "TestSuite",
-            "instance": [
+            "name": "Workflow run of BCCDC-PHL/genoflu-nf",
+            "description": "Run GenoFlu",
+            "hasPart": [
                 {
-                    "@id": "#f24f1854-73df-4d26-93aa-0a65c67432cb"
+                    "@id": "main.nf"
+                },
+                {
+                    "@id": "README.md"
+                },
+                {
+                    "@id": "nextflow_schema.json"
+                },
+                {
+                    "@id": "nextflow.config"
+                },
+                {
+                    "@id": "file:///home/dfornika/code/genoflu-nf/test_input/EPI-ISL-20215425.fasta"
+                },
+                {
+                    "@id": "samplesheet.csv"
+                },
+                {
+                    "@id": "test_output/test/genoflu/EPI-ISL-20215425_genoflu_stats.tsv"
+                },
+                {
+                    "@id": "test_output/test/genoflu/EPI-ISL-20215425_genoflu_stats.json"
                 }
             ],
             "mainEntity": {
                 "@id": "main.nf"
             },
-            "name": "Test suite for BCCDC-PHL/genoflu-nf"
+            "mentions": [
+                {
+                    "@id": "#5d8e3f76-8121-42b0-85a9-83bec62e0fad"
+                },
+                {
+                    "@id": "#task/d016edc43aac1da2c132a8fd1815fef6"
+                },
+                {
+                    "@id": "#task/d016edc43aac1da2c132a8fd1815fef6/EPI-ISL-20215425_genoflu_stats.tsv"
+                },
+                {
+                    "@id": "#task/d016edc43aac1da2c132a8fd1815fef6/EPI-ISL-20215425_genoflu_stats.json"
+                },
+                {
+                    "@id": "#publish/d016edc43aac1da2c132a8fd1815fef6/EPI-ISL-20215425_genoflu_stats.tsv"
+                },
+                {
+                    "@id": "#publish/d016edc43aac1da2c132a8fd1815fef6/EPI-ISL-20215425_genoflu_stats.json"
+                }
+            ]
         },
         {
-            "@id": "#f24f1854-73df-4d26-93aa-0a65c67432cb",
-            "@type": "TestInstance",
-            "name": "GitHub Actions workflow for testing BCCDC-PHL/genoflu-nf",
-            "resource": "repos/BCCDC-PHL/genoflu-nf/actions/workflows/nf-test.yml",
-            "runsOn": {
-                "@id": "https://w3id.org/ro/terms/test#GithubService"
+            "@id": "https://w3id.org/ro/wfrun/process/0.1",
+            "@type": "CreativeWork",
+            "name": "Process Run Crate",
+            "version": "0.1"
+        },
+        {
+            "@id": "https://w3id.org/ro/wfrun/workflow/0.1",
+            "@type": "CreativeWork",
+            "name": "Workflow Run Crate",
+            "version": "0.1"
+        },
+        {
+            "@id": "https://w3id.org/ro/wfrun/provenance/0.1",
+            "@type": "CreativeWork",
+            "name": "Provenance Run Crate",
+            "version": "0.1"
+        },
+        {
+            "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0",
+            "@type": "CreativeWork",
+            "name": "Workflow RO-Crate",
+            "version": "1.0"
+        },
+        {
+            "@id": "main.nf",
+            "@type": [
+                "File",
+                "SoftwareSourceCode",
+                "ComputationalWorkflow",
+                "HowTo"
+            ],
+            "conformsTo": {
+                "@id": "https://bioschemas.org/profiles/ComputationalWorkflow/1.0-RELEASE"
             },
-            "url": "https://api.github.com"
+            "name": "BCCDC-PHL/genoflu-nf",
+            "description": "Run GenoFlu",
+            "programmingLanguage": {
+                "@id": "https://w3id.org/workflowhub/workflow-ro-crate#nextflow"
+            },
+            "encodingFormat": "application/nextflow",
+            "runtimePlatform": "Nextflow 26.04.4",
+            "hasPart": [
+                {
+                    "@id": "#module/GENOFLU"
+                }
+            ],
+            "input": [
+                {
+                    "@id": "#param/input"
+                },
+                {
+                    "@id": "#param/outdir"
+                },
+                {
+                    "@id": "#param/publish_dir_mode"
+                },
+                {
+                    "@id": "#param/plaintext_email"
+                },
+                {
+                    "@id": "#param/monochrome_logs"
+                },
+                {
+                    "@id": "#param/help"
+                },
+                {
+                    "@id": "#param/help_full"
+                },
+                {
+                    "@id": "#param/show_hidden"
+                },
+                {
+                    "@id": "#param/version"
+                },
+                {
+                    "@id": "#param/pipelines_testdata_base_path"
+                },
+                {
+                    "@id": "#param/trace_report_suffix"
+                },
+                {
+                    "@id": "#param/custom_config_version"
+                },
+                {
+                    "@id": "#param/custom_config_base"
+                },
+                {
+                    "@id": "#param/validate_params"
+                },
+                {
+                    "@id": "#param/apptainer_cache"
+                },
+                {
+                    "@id": "#param/helpFull"
+                },
+                {
+                    "@id": "#param/showHidden"
+                }
+            ],
+            "output": [
+                
+            ],
+            "step": [
+                {
+                    "@id": "#process-step/BCCDCPHL_GENOFLU_NF:GENOFLU_NF:GENOFLU"
+                }
+            ]
         },
         {
-            "@id": "https://w3id.org/ro/terms/test#GithubService",
-            "@type": "TestService",
-            "name": "Github Actions",
-            "url": {
-                "@id": "https://github.com"
-            }
+            "@id": "https://w3id.org/workflowhub/workflow-ro-crate#nextflow",
+            "@type": "ComputerLanguage",
+            "name": "Nextflow",
+            "identifier": "https://www.nextflow.io/",
+            "url": "https://www.nextflow.io/",
+            "version": "26.04.4"
         },
         {
-            "@id": "assets/",
-            "@type": "Dataset",
-            "description": "Additional files"
+            "@id": "main.nf#software-application",
+            "@type": "SoftwareApplication",
+            "name": "Nextflow 26.04.4"
         },
         {
-            "@id": "conf/",
-            "@type": "Dataset",
-            "description": "Configuration files"
+            "@id": "#module/GENOFLU",
+            "@type": "SoftwareApplication",
+            "name": "genoflu",
+            "url": "file:///home/dfornika/code/genoflu-nf/modules/local/genoflu/main.nf",
+            "hasPart": [
+                {
+                    "@id": "#module/GENOFLU/genoflu"
+                }
+            ]
         },
         {
-            "@id": "docs/",
-            "@type": "Dataset",
-            "description": "Markdown files for documenting the pipeline"
+            "@id": "#module/GENOFLU/genoflu",
+            "@type": "SoftwareApplication",
+            "name": "genoflu",
+            "description": "Classify HPAI H5N1 goose/Guangdong clade 2.3.4.4b viruses."
         },
         {
-            "@id": "modules/",
-            "@type": "Dataset",
-            "description": "Modules used by the pipeline"
+            "@id": "#param/input",
+            "@type": "FormalParameter",
+            "additionalType": "File",
+            "conformsTo": {
+                "@id": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE"
+            },
+            "encodingFormat": "text/csv",
+            "name": "input",
+            "description": "Path to comma-separated file containing information about the samples in the experiment."
         },
         {
-            "@id": "modules/nf-core/",
-            "@type": "Dataset",
-            "description": "nf-core modules"
+            "@id": "#param/outdir",
+            "@type": "FormalParameter",
+            "additionalType": "Dataset",
+            "conformsTo": {
+                "@id": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE"
+            },
+            "name": "outdir",
+            "description": "The output directory where the results will be saved. You have to use absolute paths to storage on Cloud infrastructure."
         },
         {
-            "@id": "workflows/",
-            "@type": "Dataset",
-            "description": "Main pipeline workflows to be executed in main.nf"
+            "@id": "#param/publish_dir_mode",
+            "@type": "FormalParameter",
+            "additionalType": "Text",
+            "conformsTo": {
+                "@id": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE"
+            },
+            "name": "publish_dir_mode",
+            "defaultValue": "copy",
+            "description": "Method used to save pipeline results to output directory."
         },
         {
-            "@id": "subworkflows/",
-            "@type": "Dataset",
-            "description": "Smaller subworkflows"
+            "@id": "#param/plaintext_email",
+            "@type": "FormalParameter",
+            "additionalType": "Boolean",
+            "conformsTo": {
+                "@id": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE"
+            },
+            "name": "plaintext_email",
+            "description": "Send plain-text email instead of HTML."
         },
         {
-            "@id": "nextflow.config",
-            "@type": "File",
-            "description": "Main Nextflow configuration file"
+            "@id": "#param/monochrome_logs",
+            "@type": "FormalParameter",
+            "additionalType": "Boolean",
+            "conformsTo": {
+                "@id": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE"
+            },
+            "name": "monochrome_logs",
+            "description": "Do not use coloured log outputs."
+        },
+        {
+            "@id": "#param/help",
+            "@type": "FormalParameter",
+            "additionalType": "Boolean",
+            "conformsTo": {
+                "@id": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE"
+            },
+            "name": "help",
+            "description": "Display the help message."
+        },
+        {
+            "@id": "#param/help_full",
+            "@type": "FormalParameter",
+            "additionalType": "Boolean",
+            "conformsTo": {
+                "@id": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE"
+            },
+            "name": "help_full",
+            "description": "Display the full detailed help message."
+        },
+        {
+            "@id": "#param/show_hidden",
+            "@type": "FormalParameter",
+            "additionalType": "Boolean",
+            "conformsTo": {
+                "@id": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE"
+            },
+            "name": "show_hidden",
+            "description": "Display hidden parameters in the help message (only works when --help or --help_full are provided)."
+        },
+        {
+            "@id": "#param/version",
+            "@type": "FormalParameter",
+            "additionalType": "Boolean",
+            "conformsTo": {
+                "@id": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE"
+            },
+            "name": "version",
+            "description": "Display version and exit."
+        },
+        {
+            "@id": "#param/pipelines_testdata_base_path",
+            "@type": "FormalParameter",
+            "additionalType": "Text",
+            "conformsTo": {
+                "@id": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE"
+            },
+            "name": "pipelines_testdata_base_path",
+            "defaultValue": "https://raw.githubusercontent.com/nf-core/test-datasets/",
+            "description": "Base URL or local path to location of pipeline test dataset files"
+        },
+        {
+            "@id": "#param/trace_report_suffix",
+            "@type": "FormalParameter",
+            "additionalType": "Text",
+            "conformsTo": {
+                "@id": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE"
+            },
+            "name": "trace_report_suffix",
+            "description": "Suffix to add to the trace report filename. Default is the date and time in the format yyyy-MM-dd_HH-mm-ss."
+        },
+        {
+            "@id": "#param/custom_config_version",
+            "@type": "FormalParameter",
+            "additionalType": "Text",
+            "conformsTo": {
+                "@id": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE"
+            },
+            "name": "custom_config_version",
+            "defaultValue": "master",
+            "description": "Git commit id for Institutional configs."
+        },
+        {
+            "@id": "#param/custom_config_base",
+            "@type": "FormalParameter",
+            "additionalType": "Text",
+            "conformsTo": {
+                "@id": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE"
+            },
+            "name": "custom_config_base",
+            "defaultValue": "https://raw.githubusercontent.com/nf-core/configs/master",
+            "description": "Base directory for Institutional configs."
+        },
+        {
+            "@id": "#param/validate_params",
+            "@type": "FormalParameter",
+            "additionalType": "Boolean",
+            "conformsTo": {
+                "@id": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE"
+            },
+            "name": "validate_params",
+            "defaultValue": true,
+            "description": "Boolean whether to validate parameters against the schema at runtime"
+        },
+        {
+            "@id": "#param/apptainer_cache",
+            "@type": "FormalParameter",
+            "additionalType": "Dataset",
+            "conformsTo": {
+                "@id": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE"
+            },
+            "name": "apptainer_cache"
+        },
+        {
+            "@id": "#param/helpFull",
+            "@type": "FormalParameter",
+            "additionalType": "Boolean",
+            "conformsTo": {
+                "@id": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE"
+            },
+            "name": "helpFull"
+        },
+        {
+            "@id": "#param/showHidden",
+            "@type": "FormalParameter",
+            "additionalType": "Boolean",
+            "conformsTo": {
+                "@id": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE"
+            },
+            "name": "showHidden"
+        },
+        {
+            "@id": "#process-step/BCCDCPHL_GENOFLU_NF:GENOFLU_NF:GENOFLU",
+            "@type": "HowToStep",
+            "workExample": {
+                "@id": "#module/GENOFLU"
+            },
+            "position": 1
+        },
+        {
+            "@id": "main.nf#organize",
+            "@type": "OrganizeAction",
+            "agent": null,
+            "instrument": {
+                "@id": "main.nf#software-application"
+            },
+            "name": "Run of Nextflow 26.04.4",
+            "object": [
+                {
+                    "@id": "#process-control/BCCDCPHL_GENOFLU_NF:GENOFLU_NF:GENOFLU"
+                }
+            ],
+            "result": {
+                "@id": "#5d8e3f76-8121-42b0-85a9-83bec62e0fad"
+            },
+            "startTime": "2026-06-30T16:48:56.03349909-07:00",
+            "endTime": "2026-06-30T16:49:03.947778264-07:00"
+        },
+        {
+            "@id": "#5d8e3f76-8121-42b0-85a9-83bec62e0fad",
+            "@type": "CreateAction",
+            "agent": null,
+            "name": "Nextflow workflow run 5d8e3f76-8121-42b0-85a9-83bec62e0fad",
+            "startTime": "2026-06-30T16:48:56.03349909-07:00",
+            "endTime": "2026-06-30T16:49:03.947778264-07:00",
+            "instrument": {
+                "@id": "main.nf"
+            },
+            "object": [
+                {
+                    "@id": "#param/input/value"
+                },
+                {
+                    "@id": "#param/outdir/value"
+                },
+                {
+                    "@id": "#param/publish_dir_mode/value"
+                },
+                {
+                    "@id": "#param/plaintext_email/value"
+                },
+                {
+                    "@id": "#param/monochrome_logs/value"
+                },
+                {
+                    "@id": "#param/help/value"
+                },
+                {
+                    "@id": "#param/help_full/value"
+                },
+                {
+                    "@id": "#param/show_hidden/value"
+                },
+                {
+                    "@id": "#param/version/value"
+                },
+                {
+                    "@id": "#param/pipelines_testdata_base_path/value"
+                },
+                {
+                    "@id": "#param/trace_report_suffix/value"
+                },
+                {
+                    "@id": "#param/custom_config_version/value"
+                },
+                {
+                    "@id": "#param/custom_config_base/value"
+                },
+                {
+                    "@id": "#param/validate_params/value"
+                },
+                {
+                    "@id": "#param/apptainer_cache/value"
+                },
+                {
+                    "@id": "#param/helpFull/value"
+                },
+                {
+                    "@id": "#param/showHidden/value"
+                },
+                {
+                    "@id": "file:///home/dfornika/code/genoflu-nf/test_input/EPI-ISL-20215425.fasta"
+                },
+                {
+                    "@id": "samplesheet.csv"
+                }
+            ],
+            "result": [
+                {
+                    "@id": "test_output/test/genoflu/EPI-ISL-20215425_genoflu_stats.tsv"
+                },
+                {
+                    "@id": "test_output/test/genoflu/EPI-ISL-20215425_genoflu_stats.json"
+                }
+            ]
         },
         {
             "@id": "README.md",
             "@type": "File",
-            "description": "Basic pipeline usage information"
+            "name": "README.md",
+            "description": "The README file of the workflow.",
+            "encodingFormat": "text/markdown"
         },
         {
             "@id": "nextflow_schema.json",
             "@type": "File",
-            "description": "JSON schema for pipeline parameter specification"
+            "name": "nextflow_schema.json",
+            "description": "The parameter schema of the workflow.",
+            "encodingFormat": "application/json"
         },
         {
-            "@id": "LICENSE",
+            "@id": "nextflow.config",
             "@type": "File",
-            "description": "The license - should be MIT"
+            "name": "Resolved Nextflow configuration",
+            "description": "The resolved Nextflow configuration for the workflow run.",
+            "encodingFormat": "text/plain"
         },
         {
-            "@id": "modules.json",
+            "@id": "#param/input/value",
+            "@type": "PropertyValue",
+            "exampleOfWork": {
+                "@id": "#param/input"
+            },
+            "name": "input",
+            "value": "test_input/samplesheet.csv"
+        },
+        {
+            "@id": "#param/outdir/value",
+            "@type": "PropertyValue",
+            "exampleOfWork": {
+                "@id": "#param/outdir"
+            },
+            "name": "outdir",
+            "value": "test_output/test"
+        },
+        {
+            "@id": "#param/publish_dir_mode/value",
+            "@type": "PropertyValue",
+            "exampleOfWork": {
+                "@id": "#param/publish_dir_mode"
+            },
+            "name": "publish_dir_mode",
+            "value": "copy"
+        },
+        {
+            "@id": "#param/plaintext_email/value",
+            "@type": "PropertyValue",
+            "exampleOfWork": {
+                "@id": "#param/plaintext_email"
+            },
+            "name": "plaintext_email",
+            "value": false
+        },
+        {
+            "@id": "#param/monochrome_logs/value",
+            "@type": "PropertyValue",
+            "exampleOfWork": {
+                "@id": "#param/monochrome_logs"
+            },
+            "name": "monochrome_logs",
+            "value": false
+        },
+        {
+            "@id": "#param/help/value",
+            "@type": "PropertyValue",
+            "exampleOfWork": {
+                "@id": "#param/help"
+            },
+            "name": "help",
+            "value": false
+        },
+        {
+            "@id": "#param/help_full/value",
+            "@type": "PropertyValue",
+            "exampleOfWork": {
+                "@id": "#param/help_full"
+            },
+            "name": "help_full",
+            "value": false
+        },
+        {
+            "@id": "#param/show_hidden/value",
+            "@type": "PropertyValue",
+            "exampleOfWork": {
+                "@id": "#param/show_hidden"
+            },
+            "name": "show_hidden",
+            "value": false
+        },
+        {
+            "@id": "#param/version/value",
+            "@type": "PropertyValue",
+            "exampleOfWork": {
+                "@id": "#param/version"
+            },
+            "name": "version",
+            "value": false
+        },
+        {
+            "@id": "#param/pipelines_testdata_base_path/value",
+            "@type": "PropertyValue",
+            "exampleOfWork": {
+                "@id": "#param/pipelines_testdata_base_path"
+            },
+            "name": "pipelines_testdata_base_path",
+            "value": "https://raw.githubusercontent.com/nf-core/test-datasets/"
+        },
+        {
+            "@id": "#param/trace_report_suffix/value",
+            "@type": "PropertyValue",
+            "exampleOfWork": {
+                "@id": "#param/trace_report_suffix"
+            },
+            "name": "trace_report_suffix",
+            "value": "2026-06-30_16-48-52"
+        },
+        {
+            "@id": "#param/custom_config_version/value",
+            "@type": "PropertyValue",
+            "exampleOfWork": {
+                "@id": "#param/custom_config_version"
+            },
+            "name": "custom_config_version",
+            "value": "master"
+        },
+        {
+            "@id": "#param/custom_config_base/value",
+            "@type": "PropertyValue",
+            "exampleOfWork": {
+                "@id": "#param/custom_config_base"
+            },
+            "name": "custom_config_base",
+            "value": "https://raw.githubusercontent.com/nf-core/configs/master"
+        },
+        {
+            "@id": "#param/validate_params/value",
+            "@type": "PropertyValue",
+            "exampleOfWork": {
+                "@id": "#param/validate_params"
+            },
+            "name": "validate_params",
+            "value": true
+        },
+        {
+            "@id": "#param/apptainer_cache/value",
+            "@type": "PropertyValue",
+            "exampleOfWork": {
+                "@id": "#param/apptainer_cache"
+            },
+            "name": "apptainer_cache",
+            "value": "file:///home/dfornika/.apptainer/cache/images"
+        },
+        {
+            "@id": "#param/helpFull/value",
+            "@type": "PropertyValue",
+            "exampleOfWork": {
+                "@id": "#param/helpFull"
+            },
+            "name": "helpFull",
+            "value": false
+        },
+        {
+            "@id": "#param/showHidden/value",
+            "@type": "PropertyValue",
+            "exampleOfWork": {
+                "@id": "#param/showHidden"
+            },
+            "name": "showHidden",
+            "value": false
+        },
+        {
+            "@id": "#process-control/BCCDCPHL_GENOFLU_NF:GENOFLU_NF:GENOFLU",
+            "@type": "ControlAction",
+            "instrument": {
+                "@id": "#process-step/BCCDCPHL_GENOFLU_NF:GENOFLU_NF:GENOFLU"
+            },
+            "name": "Orchestrate process BCCDCPHL_GENOFLU_NF:GENOFLU_NF:GENOFLU",
+            "object": [
+                {
+                    "@id": "#task/d016edc43aac1da2c132a8fd1815fef6"
+                }
+            ]
+        },
+        {
+            "@id": "#task/d016edc43aac1da2c132a8fd1815fef6",
+            "@type": "CreateAction",
+            "name": "BCCDCPHL_GENOFLU_NF:GENOFLU_NF:GENOFLU (EPI-ISL-20215425)",
+            "instrument": {
+                "@id": "#module/GENOFLU"
+            },
+            "agent": null,
+            "object": [
+                {
+                    "@id": "file:///home/dfornika/code/genoflu-nf/test_input/EPI-ISL-20215425.fasta"
+                }
+            ],
+            "result": [
+                {
+                    "@id": "#task/d016edc43aac1da2c132a8fd1815fef6/EPI-ISL-20215425_genoflu_stats.tsv"
+                },
+                {
+                    "@id": "#task/d016edc43aac1da2c132a8fd1815fef6/EPI-ISL-20215425_genoflu_stats.json"
+                }
+            ],
+            "actionStatus": "http://schema.org/CompletedActionStatus"
+        },
+        {
+            "@id": "#task/d016edc43aac1da2c132a8fd1815fef6/EPI-ISL-20215425_genoflu_stats.tsv",
+            "@type": "CreativeWork",
+            "name": "EPI-ISL-20215425_genoflu_stats.tsv",
+            "encodingFormat": "text/tab-separated-values"
+        },
+        {
+            "@id": "#task/d016edc43aac1da2c132a8fd1815fef6/EPI-ISL-20215425_genoflu_stats.json",
+            "@type": "CreativeWork",
+            "name": "EPI-ISL-20215425_genoflu_stats.json",
+            "encodingFormat": "application/json"
+        },
+        {
+            "@id": "#publish/d016edc43aac1da2c132a8fd1815fef6/EPI-ISL-20215425_genoflu_stats.tsv",
+            "@type": "CreateAction",
+            "name": "publish",
+            "instrument": {
+                "@id": "main.nf#software-application"
+            },
+            "object": {
+                "@id": "#task/d016edc43aac1da2c132a8fd1815fef6/EPI-ISL-20215425_genoflu_stats.tsv"
+            },
+            "result": {
+                "@id": "test_output/test/genoflu/EPI-ISL-20215425_genoflu_stats.tsv"
+            },
+            "actionStatus": "http://schema.org/CompletedActionStatus"
+        },
+        {
+            "@id": "#publish/d016edc43aac1da2c132a8fd1815fef6/EPI-ISL-20215425_genoflu_stats.json",
+            "@type": "CreateAction",
+            "name": "publish",
+            "instrument": {
+                "@id": "main.nf#software-application"
+            },
+            "object": {
+                "@id": "#task/d016edc43aac1da2c132a8fd1815fef6/EPI-ISL-20215425_genoflu_stats.json"
+            },
+            "result": {
+                "@id": "test_output/test/genoflu/EPI-ISL-20215425_genoflu_stats.json"
+            },
+            "actionStatus": "http://schema.org/CompletedActionStatus"
+        },
+        {
+            "@id": "file:///home/dfornika/code/genoflu-nf/test_input/EPI-ISL-20215425.fasta",
             "@type": "File",
-            "description": "Version information for modules from nf-core/modules"
+            "name": "EPI-ISL-20215425.fasta"
         },
         {
-            "@id": "docs/usage.md",
+            "@id": "samplesheet.csv",
             "@type": "File",
-            "description": "Usage documentation"
+            "description": "Input file specified by params.input",
+            "encodingFormat": "text/csv"
         },
         {
-            "@id": "docs/output.md",
+            "@id": "test_output/test/genoflu/EPI-ISL-20215425_genoflu_stats.tsv",
             "@type": "File",
-            "description": "Output documentation"
+            "name": "EPI-ISL-20215425_genoflu_stats.tsv",
+            "encodingFormat": "text/tab-separated-values"
         },
         {
-            "@id": ".nf-core.yml",
+            "@id": "test_output/test/genoflu/EPI-ISL-20215425_genoflu_stats.json",
             "@type": "File",
-            "description": "nf-core configuration file, configuring template features and linting rules"
-        },
-        {
-            "@id": "https://nf-co.re/",
-            "@type": "Organization",
-            "name": "nf-core",
-            "url": "https://nf-co.re/"
-        },
-        {
-            "@id": "https://orcid.org/0000-0002-6178-3585",
-            "@type": "Person",
-            "name": "Dan Fornika"
+            "name": "EPI-ISL-20215425_genoflu_stats.json",
+            "encodingFormat": "application/json"
         }
     ]
 }
