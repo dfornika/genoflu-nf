@@ -1,13 +1,10 @@
-# BCCDC-PHL/genoflu-nf
+# genoflu-nf
 
-[![Open in GitHub Codespaces](https://img.shields.io/badge/Open_In_GitHub_Codespaces-black?labelColor=grey&logo=github)](https://github.com/codespaces/new/BCCDC-PHL/genoflu-nf)
 [![GitHub Actions CI Status](https://github.com/BCCDC-PHL/genoflu-nf/actions/workflows/nf-test.yml/badge.svg)](https://github.com/BCCDC-PHL/genoflu-nf/actions/workflows/nf-test.yml)
-[![GitHub Actions Linting Status](https://github.com/BCCDC-PHL/genoflu-nf/actions/workflows/linting.yml/badge.svg)](https://github.com/BCCDC-PHL/genoflu-nf/actions/workflows/linting.yml)[![Cite with Zenodo](http://img.shields.io/badge/DOI-10.5281/zenodo.XXXXXXX-1073c8?labelColor=000000)](https://doi.org/10.5281/zenodo.XXXXXXX)
-[![nf-test](https://img.shields.io/badge/unit_tests-nf--test-337ab7.svg)](https://www.nf-test.com)
 
 ## Introduction
 
-**BCCDC-PHL/genoflu-nf** is a bioinformatics pipeline that ...
+**genoflu-nf** is a bioinformatics pipeline that ...
 
 <!-- TODO nf-core:
    Complete this sentence with a 2-3 sentence summary of what types of data the pipeline ingests, a brief overview of the
