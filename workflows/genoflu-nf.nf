@@ -3,7 +3,7 @@
     IMPORT MODULES / SUBWORKFLOWS / FUNCTIONS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 */
-include { FASTQC                 } from '../modules/nf-core/fastqc/main'
+include { GENOFLU }                from '../modules/local/genoflu'
 include { paramsSummaryMap       } from 'plugin/nf-schema'
 include { softwareVersionsToYAML } from '../subworkflows/nf-core/utils_nfcore_pipeline'
 
@@ -13,7 +13,7 @@ include { softwareVersionsToYAML } from '../subworkflows/nf-core/utils_nfcore_pi
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 */
 
-workflow GENOFLU-NF {
+workflow GENOFLU_NF {
 
     take:
     ch_samplesheet // channel: samplesheet read in from --input
@@ -21,11 +21,9 @@ workflow GENOFLU-NF {
 
     main:
 
+    GENOFLU(ch_samplesheet)
+
     def ch_versions = channel.empty()
-    //
-    // MODULE: Run FastQC
-    //
-    FASTQC(ch_samplesheet)
 
     //
     // Collate and save software versions

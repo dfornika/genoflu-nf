@@ -13,7 +13,7 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 */
 
-include { GENOFLU-NF  } from './workflows/genoflu-nf'
+include { GENOFLU_NF  }             from './workflows/genoflu-nf'
 include { PIPELINE_INITIALISATION } from './subworkflows/local/utils_nfcore_genoflu-nf_pipeline'
 include { PIPELINE_COMPLETION     } from './subworkflows/local/utils_nfcore_genoflu-nf_pipeline'
 /*
@@ -25,17 +25,13 @@ include { PIPELINE_COMPLETION     } from './subworkflows/local/utils_nfcore_geno
 //
 // WORKFLOW: Run main analysis pipeline depending on type of input
 //
-workflow BCCDCPHL_GENOFLU-NF {
+workflow BCCDCPHL_GENOFLU_NF {
 
     take:
     samplesheet // channel: samplesheet read in from --input
 
     main:
-
-    //
-    // WORKFLOW: Run pipeline
-    //
-    GENOFLU-NF (
+    GENOFLU_NF (
         samplesheet,
         params.outdir,
     )
@@ -67,7 +63,7 @@ workflow {
     //
     // WORKFLOW: Run main workflow
     //
-    BCCDCPHL_GENOFLU-NF (
+    BCCDCPHL_GENOFLU_NF (
         PIPELINE_INITIALISATION.out.samplesheet
     )
     //

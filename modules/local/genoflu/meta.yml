@@ -1,0 +1,71 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/nf-core/modules/master/modules/meta-schema.json
+name: "genoflu"
+description: "Classify HPAI H5N1 goose/Guangdong clade 2.3.4.4b viruses."
+keywords:
+  - influenza_a_virus
+  - hpai
+  - genotyping
+tools:
+  ## TODO nf-core: Add a description and other details for the software below
+  - "genoflu":
+      description: "Classify HPAI H5N1 goose/Guangdong clade 2.3.4.4b viruses."
+      homepage: "https://github.com/USDA-VS/GenoFLU"
+      documentation: "https://github.com/USDA-VS/GenoFLU"
+      tool_dev_url: "https://github.com/USDA-VS/GenoFLU"
+      doi: ""
+      licence: ["GPL v3-or-later"]
+      identifier: null
+
+input:
+  ### TODO nf-core: Add a description of all of the variables used as input
+  - - meta:
+        type: map
+        description: |
+          Groovy Map containing sample information
+          e.g. `[ id:'sample1' ]`
+    - fasta:
+        type: file
+        description: Flu consensus sequence
+        pattern: "*.{fa,fasta,fna}"
+        ontologies:
+          - edam: "http://edamontology.org/format_1929" # FASTA
+
+output:
+  stats_tsv:
+    - - meta:
+          type: map
+          description: |
+            Groovy Map containing sample information
+            e.g. `[ id:'sample1' ]`
+      - "*_genoflu_stats.tsv":
+          type: file
+          description: GenoFLU stats output
+          pattern: "*_genoflu_stats.tsv"
+          ontologies:
+            - edam: "http://edamontology.org/format_3475" # TSV
+  versions_genoflu:
+    - - "${task.process}":
+          type: string
+          description: The name of the process
+      - "genoflu":
+          type: string
+          description: The name of the tool
+      - "genoflu --version":
+          type: eval
+          description: The expression to obtain the version of the tool
+
+topics:
+  versions:
+    - - ${task.process}:
+          type: string
+          description: The name of the process
+      - genoflu:
+          type: string
+          description: The name of the tool
+      - "genoflu.py --version | cut -d ' ' -f 3":
+          type: eval
+          description: The expression to obtain the version of the tool
+authors:
+  - "@dfornika"
+maintainers:
+  - "@dfornika"
